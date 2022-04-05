@@ -1,0 +1,22 @@
+{
+    "debug": true,
+    "server": {
+      "address": ":8081"
+    },
+    "database": {
+        "host": "127.0.0.1",
+        "port": "5432",
+        "user": "postgres",
+        "pass": "FUN12bfahsh21zxcsF",
+        "name": "ethdb"
+    },
+    "jobqueue": {
+        "size": 1000000
+    },
+    "ethrpc": {
+        "endpoint": "https://data-seed-prebsc-2-s3.binance.org:8545",
+        "pollingInterval": 30,
+        "scraperWorker": 8
+    }
+  
+  }

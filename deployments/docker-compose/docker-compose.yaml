@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+    postgres:
+        image: postgres:14.2
+        restart: always
+        environment:
+          - POSTGRES_PASSWORD=FUN12bfahsh21zxcsF
+          - POSTGRES_DB=ethdb
+        ports:
+          - '5432:5432'
+        volumes: 
+          - ./postgres-data:/var/lib/postgresql/data
+          # copy the sql script to create tables
+          - ../../schema/init.sql:/docker-entrypoint-initdb.d/create_tables.sql
